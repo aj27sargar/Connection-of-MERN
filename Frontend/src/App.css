@@ -1,0 +1,162 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #72edf2 10%, #5151e5 100%);
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-form {
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #5151e5;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #5151e5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #3d3dbb;
+}
+
+.users-list {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.users-list h3 {
+  text-align: center;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  background-color: #f9f9f9;
+  margin-bottom: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+  .login-container {
+    max-width: 600px; /* Increase width for tablets */
+    padding: 50px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    font-size: 18px; /* Larger input fields */
+    padding: 14px;
+  }
+
+  .submit-btn {
+    font-size: 20px; /* Larger button */
+  }
+
+  h2 {
+    font-size: 26px; /* Larger heading */
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background: linear-gradient(135deg, #4facfe 10%, #00f2fe 100%);
+  }
+
+  .login-container {
+    max-width: 800px; /* Increase width for desktops */
+    flex-direction: row; /* Align form and user list side by side */
+    justify-content: space-between;
+    padding: 60px;
+  }
+
+  .login-form, .users-list {
+    width: 48%; /* Split the space equally */
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    font-size: 20px;
+    padding: 16px;
+  }
+
+  .submit-btn {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  ul {
+    max-height: 300px;
+    overflow-y: auto; /* Ensure scrollable list for larger user data */
+  }
+
+  li {
+    font-size: 18px;
+  }
+}
